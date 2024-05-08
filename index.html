@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <!-- BIBLIOTECA DE ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles/output.css" />
+    <title>Casa da Pizza - A melhor pizzaria da região!</title>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="w-full h-[420px] bg-zinc-900 bg-Home bg-cover bg-center">
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <img
+          src="/assests/logo.jpg"
+          alt="logo Dev Pizza"
+          class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+        />
+        <h1 class="text-3xl mt-4 mb-2 font-bold text-white">Casa da Pizza</h1>
+        <span class="text-white font-medium"
+          >Rua Marcos Aurélio 21, Ferraria - PR</span
+        >
+        <div
+          class="bg-green-500 font-medium px-4 py-1 rounded-lg text-white mt-4"
+          id="date-span"
+        >
+          <span>Terça a Domingo - 18:00 às 23:00</span>
+        </div>
+      </div>
+    </header>
+
+    <h2
+      class="text-2xl md:text-4xl font-bold text-center mt-9 mb-6 text-yellow-600"
+    >
+      GRANDE (35CM/ 8 FATIAS)
+    </h2>
+
+    <!-- cardapio -->
+    <div id="menu">
+      <main
+        class="grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-7 mx-auto max-w-7xl px-2 mb-16"
+      >
+        <!-- SABORES -->
+
+        <!-- calabresa -->
+        <div class="flex gap-2">
+          <img
+            src="./assests/calabresa.jpg"
+            alt="calabresa"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-1 duration-300"
+          />
+          <div>
+            <p class="font-bold">Calabresa</p>
+            <p class="text-sm">
+              Molho de tomate da casa, mussarela, calabresa e oregano.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 69,30</p>
+              <button
+                class="bg-yellow-600 px-5 rounded add-to-cart-btn"
+                data-name="pizza calabresa"
+                data-price="69.30"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- frango -->
+        <div class="flex gap-2">
+          <img
+            src="./assests/frango.jpg"
+            alt="frango"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-1 duration-300"
+          />
+          <div>
+            <p class="font-bold">Frango com Requeijão</p>
+            <p class="text-sm">
+              Molho de tomate da casa, frango, Requeijão e oregano.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 70,00</p>
+              <button
+                class="bg-yellow-600 px-5 rounded add-to-cart-btn"
+                data-name="pizza frango"
+                data-price="70.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Margherita -->
+        <div class="flex gap-2">
+          <img
+            src="./assests/margherita.jpg"
+            alt="Marguerita"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-1 duration-300"
+          />
+          <div>
+            <p class="font-bold">Marguerita</p>
+            <p class="text-sm">
+              Molho de tomate da casa, mussarela, tomate e manjericão fresco.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 65,00</p>
+              <button
+                class="bg-yellow-600 px-5 rounded add-to-cart-btn"
+                data-name="pizza Marguerita"
+                data-price="65.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Catuperoni -->
+        <div class="flex gap-2">
+          <img
+            src="./assests/catuperoni.jpg"
+            alt="catuperoni"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-1 duration-300"
+          />
+          <div>
+            <p class="font-bold">Catuperoni</p>
+            <p class="text-sm">
+              Molho de tomate da casa, mussarela, pepperoni e requeijão.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 75,00</p>
+              <button
+                class="bg-yellow-600 px-5 rounded add-to-cart-btn"
+                data-name="pizza catuperoni"
+                data-price="75.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Napolitana -->
+        <div class="flex gap-2">
+          <img
+            src="./assests/napolitana.jpg"
+            alt="napolitana"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-1 duration-300"
+          />
+          <div>
+            <p class="font-bold">Napolitana</p>
+            <p class="text-sm">
+              Molho de tomate da casa, mussarela, tomate e oregano.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 65,00</p>
+              <button
+                class="bg-yellow-600 px-5 rounded add-to-cart-btn"
+                data-name="pizza napolitana"
+                data-price="65.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 4 queijos -->
+        <div class="flex gap-2">
+          <img
+            src="./assests/3 queijos.jpg"
+            alt="4 queijos"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-1 duration-300"
+          />
+          <div>
+            <p class="font-bold">4 Queijos</p>
+            <p class="text-sm">
+              Molho de tomate da casa, mussarela, requeijão, gorgonzola,
+              parmesão e oregano.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 75,00</p>
+              <button
+                class="bg-yellow-600 px-5 rounded add-to-cart-btn"
+                data-name="pizza 4 queijos"
+                data-price="75.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- corn bacon -->
+        <div class="flex gap-2">
+          <img
+            src="./assests/cornbacon.jpg"
+            alt="cornbacon"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-1 duration-300"
+          />
+          <div>
+            <p class="font-bold">Corn & Bacon</p>
+            <p class="text-sm">
+              Molho de tomate da casa, mussarela, milho e bacon.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 75,00</p>
+              <button
+                class="bg-yellow-600 px-5 rounded add-to-cart-btn"
+                data-name="pizza cornbacon"
+                data-price="75.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- carne seca -->
+        <div class="flex gap-2">
+          <img
+            src="./assests/carneseca.jpg"
+            alt="carneseca"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-1 duration-300"
+          />
+          <div>
+            <p class="font-bold">Carne Seca Com Cream Chease</p>
+            <p class="text-sm">
+              Molho de tomate da casa, mussarela, cebola, carne seca desfiada,
+              cream cheese e orégano.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 85,00</p>
+              <button
+                class="bg-yellow-600 px-5 rounded add-to-cart-btn"
+                data-name="pizza carneseca"
+                data-price="85.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- menu de bebidas -->
+      <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2
+          class="text-2xl md:text-4xl font-bold text-center mt-9 mb-6 text-yellow-600"
+        >
+          BEBIDAS
+        </h2>
+
+        <!-- grid bebidas -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-7 mx-auto max-w-7xl px-2 mb-16"
+          id="menu"
+        >
+          <!-- bebidas itens -->
+          <!-- fanta laranja -->
+          <div class="flex gap-2 w-full h-full">
+            <img
+              src="./assests/fanta.jpg"
+              alt="coca"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-1 duration-300"
+            />
+            <div class="w-full">
+              <p class="font-bold">Fanta Laranja 1,5L</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 10,00</p>
+                <button
+                  class="bg-yellow-600 px-5 rounded add-to-cart-btn"
+                  data-name="fanta"
+                  data-price="10.00"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- fanta uva -->
+          <div class="flex gap-2 w-full">
+            <img
+              src="./assests/fanta2.jpg"
+              alt="carneseca"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-1 duration-300"
+            />
+            <div class="w-full">
+              <p class="font-bold">Fanta Uva 1,5L</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 10,00</p>
+                <button
+                  class="bg-yellow-600 px-5 rounded add-to-cart-btn"
+                  data-name="fanta2"
+                  data-price="10.00"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- cerveja -->
+          <div class="flex gap-2 w-full">
+            <img
+              src="./assests/cerveja.jpg"
+              alt="Heineken"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-1 duration-300"
+            />
+            <div class="w-full">
+              <p class="font-bold">Heineken 350ml</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 8,00</p>
+                <button
+                  class="bg-yellow-600 px-5 rounded add-to-cart-btn"
+                  data-name="heineken"
+                  data-price="8.00"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- cerveja 2 -->
+          <div class="flex gap-2 w-full">
+            <img
+              src="./assests/cerveja2.jpg"
+              alt="Heineken"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-1 duration-300"
+            />
+            <div class="w-full">
+              <p class="font-bold">Amstel 350ml</p>
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 8,00</p>
+                <button
+                  class="bg-yellow-600 px-5 rounded add-to-cart-btn"
+                  data-name="Amstel"
+                  data-price="8.00"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal cart -->
+    <div
+      class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+      id="cart-modal"
+    >
+      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+        <p class="font-bold">Total: <span id="cart-total">0,00</span></p>
+        <p class="font-semibold mt-4">Endereço de entrega</p>
+        <input
+          type="text"
+          placeholder="Digite seu endereço completo"
+          id="address"
+          class="w-full border-2 p-1 rounded my-1"
+        />
+        <p class="text-red-500 hidden" id="address-warn">
+          Digite seu endereço completo
+        </p>
+        <div class="flex items-center justify-between w-full mt-5">
+          <button id="close-modal-btn">Fechar</button>
+          <button
+            id="checkout-btn"
+            class="bg-green-500 text-white px-4 py-1 font-semibold rounded"
+          >
+            Finalizar pedido
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="w-full bg-yellow-600 py-3 fixed bottom-0 z-40 flex items-center justify-center"
+    >
+      <button
+        class="flex items-center gap-2 text-white font-bold"
+        id="cart-btn"
+      >
+        (<span id="cart-count">0</span>) Meu carrinho
+        <i class="fa fa-cart-plus text-lg text-white"></i>
+      </button>
+    </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
